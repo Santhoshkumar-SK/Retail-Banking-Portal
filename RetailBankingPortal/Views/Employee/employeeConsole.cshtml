@@ -1,0 +1,29 @@
+﻿@model RetailBankingPortal.Models.Customer
+@{
+    ViewData["Title"] = "CustomerDetails";
+    Layout = "~/Views/Employee/_EmployeeLayout.cshtml";
+}
+<link rel="stylesheet" href="~/css/MainStyle.css" />
+<div class="limiter" style="background-color : transparent">
+    <div class="container-create">
+        <div class="warp-create">
+            <div class="create-form-title">
+                <span class="create-form-title-1">
+                    Search Customer Details
+                </span>
+            </div>
+            <form asp-action="employeeConsole">
+                <div class="form-group">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <input asp-for="customerId" placeholder="UserId" class="form-control" />
+                    <span asp-validation-for="customerId" class="text-danger"></span>
+                    <br />
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+

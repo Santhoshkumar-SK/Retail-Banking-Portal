@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - BankPortal</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<style>
+    body {
+        background-image: url("https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1619019895000/photosp/51e02cef-cda7-42d8-bcce-066f0e1916dc/stock-photo-business-wealth-finance-money-coin-currency-stack-banking-piggy-51e02cef-cda7-42d8-bcce-066f0e1916dc.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                <span class="navbar-brand text-color-navbrand">Retail Banking System</span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li  @(ViewContext.RouteData.Values["action"].ToString().Equals("Customer") ? "class=active-navlink" : "")
+                            class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Login" asp-action="Customer">Customer</a>
+                        </li>
+                        <li @(ViewContext.RouteData.Values["action"].ToString().Equals("Employee") ? "class=active-navlink" : "")
+                            class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Login" asp-action="Employee">Employee</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+        @RenderBody()
+
+    
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - BankPortal
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

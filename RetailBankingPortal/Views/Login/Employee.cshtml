@@ -1,0 +1,38 @@
+﻿@model RetailBankingPortal.Models.UserDTO
+
+@{
+    ViewData["Title"] = "Employee";
+    Layout = "~/Views/Login/_LoginLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/MainStyle.css" />
+<div class="limiter" style="background-color: transparent">
+    <div class="container-create">
+        <div class="warp-create">
+            <div class="create-form-title">
+                <span class="create-form-title-1">
+                    Employee Login
+                </span>
+            </div>
+            <form asp-action="Employee">
+                <div class="form-group">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <input hidden asp-for="Role" value="Employee" />
+                    <input asp-for="UserId" placeholder="UserId" class="form-control" />
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                    <br />
+                    <input type="password" asp-for="Password" placeholder="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <br />
+                    <span asp-validation-for="Role" class="text-danger"></span>
+                    <br />
+                    <button type="submit" class="btn btn-success">Login</button>
+                </div>
+
+            </form>
+        </div>
+        
+    </div>   
+</div>
+
+

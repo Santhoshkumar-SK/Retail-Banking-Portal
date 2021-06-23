@@ -1,0 +1,68 @@
+﻿<Properties StartupConfiguration="{99BAED8C-4324-4CBA-9C1E-E5E2AEA31C0C}|Default">
+  <MonoDevelop.Ide.ItemProperties.RetailBankingPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Repository/EmployeeRepo.cs">
+    <Files>
+      <File FileName="appsettings.json" Line="10" Column="1" />
+      <File FileName="Program.cs" />
+      <File FileName="Startup.cs" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Controllers/CustomerController.cs" />
+      <File FileName="Controllers/LoginController.cs" />
+      <File FileName="Controllers/EmployeeController.cs" />
+      <File FileName="Services/CustomerService.cs" />
+      <File FileName="Views/Employee/_EmployeeLayout.cshtml" />
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/css/Index.css" />
+      <File FileName="wwwroot/css/MainStyle.css" Line="74" Column="1" />
+      <File FileName="wwwroot/css/site.css" />
+      <File FileName="Views/Customer/_CustomerLayout.cshtml" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="12" Column="87" />
+      <File FileName="Views/Login/_LoginLayout.cshtml" Line="16" Column="6" />
+      <File FileName="Views/Login/Customer.cshtml" />
+      <File FileName="Views/Customer/statement.cshtml" Line="22" Column="11" />
+      <File FileName="wwwroot/css/StatementStyle.css" />
+      <File FileName="Models/TransactionHistory.cs" />
+      <File FileName="Views/Customer/transactionHistory.cshtml" Line="27" Column="46" />
+      <File FileName="Views/Customer/transaction.cshtml" Line="40" Column="18" />
+      <File FileName="wwwroot/css/CreateCustomerStyle.css" />
+      <File FileName="Views/Employee/employeeConsole.cshtml" />
+      <File FileName="Views/Employee/createCustomer.cshtml" Line="7" Column="1" />
+      <File FileName="Views/Employee/customerDetails.cshtml" Line="13" Column="20" />
+      <File FileName="Views/Login/Employee.cshtml" />
+      <File FileName="Views/Login/customerConsole.cshtml" Line="21" Column="110" />
+      <File FileName="Services/EmployeeService.cs" Line="89" Column="13" />
+      <File FileName="Repository/EmployeeRepo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RetailBankingPortal" expanded="True">
+            <Node name="RetailBankingPortal" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="EmployeeRepo.cs" selected="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Customer" expanded="True" />
+                <Node name="Employee" expanded="True" />
+                <Node name="Login" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Video" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<RetailBankingPortal.Models.TransactionHistory>
+@{
+    ViewData["Title"] = "TransactionHistory";
+    Layout = "~/Views/Customer/_CustomerLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/MainStyle.css" />
+@if (Model != null)
+{
+    <br />
+
+    <h1>Transaction History</h1>
+    <hr />
+
+    <div class="card transactionbg">
+        <div class="card-body">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>CustomerId</th>
+                        <th>AccountId</th>
+                        <th>CounterpartyAccountId</th>
+                        <th>Transfer Amount</th>
+                        <th>Closing Balance</th>
+                        <th>DateofTransaction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@Html.DisplayFor(modelItem => item.CustomerId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.AccountId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.CounterpartyAccountId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TransferAmount)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ClosingBalance)</td>
+                            <td>@String.Format("{0:d/M/yyyy}", item.DateofTranasction)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>No transaction found</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}

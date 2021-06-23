@@ -1,0 +1,37 @@
+﻿@model RetailBankingPortal.Models.Customer
+@{
+    ViewData["Title"] = "CustomerDetails";
+    Layout = "~/Views/Employee/_EmployeeLayout.cshtml";
+}
+
+
+
+
+
+<link rel="stylesheet" href="~/css/MainStyle.css" />
+
+<div class="limiter">
+<div class="container-create">
+    <div class="warp-create">
+        <div class="card">
+            <div class="card-header">
+                @Model.customerName 's Details
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    Customer ID : @Model.customerId
+                </h5>
+                <p class="card-text">
+                    Date of Birth : @String.Format("{0:d/M/yyyy}", Model.customerDOB)<br />
+                    Address       : @Model.customerAddress <br />
+                    Aadhar        : @Model.customerAdhaarnumber <br />
+                    Pan Number    : @Model.customerPannumber <br />
+                    Account Type  : @Model.customerAccountType <br />
+                </p>
+                <a  class="btn btn-primary" asp-area="" asp-controller="Employee" asp-action="employeeConsole">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>

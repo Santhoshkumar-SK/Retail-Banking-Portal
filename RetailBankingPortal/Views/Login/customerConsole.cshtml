@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RetailBankingPortal.Models.CustomerAccount>
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Customer/_CustomerLayout.cshtml";
+}
+<link rel="stylesheet" href="~/css/MainStyle.css" />
+
+
+<div class="limiter">
+    <div class="container-create">
+        <div class="warp-create">
+            <div class="card">
+                <div class="card-header">
+                   Hello Customer
+                </div>
+                <div class="card-body">
+                    
+                    <p class="card-text">
+                        @foreach (var item in Model)
+                        {
+                            <b>Customer Account id : @Html.DisplayFor(modelItem => item.accountId)</b> <br />
+                            <b>Customer Account Balance : @Html.DisplayFor(modelItem => item.accountBalance)</b> 
+                        }
+                    </p>
+                  
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

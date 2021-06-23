@@ -1,0 +1,92 @@
+﻿@model RetailBankingPortal.Models.CreateCustomer
+@{
+    ViewData["Title"] = "createCustomer";
+    Layout = "~/Views/Employee/_EmployeeLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/CreateCustomerStyle.css" />
+
+@if(@ViewBag.SuccessfullCreation != null){
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Customer Account Created Successfully </strong> @ViewBag.SuccessfullCreation
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+}
+
+<div class="limiter" style="background-color : transparent;">
+    
+    <div class="container-create">
+        <div class="wrap-create">
+            <div class="create-form-title">
+                <span class="create-form-title-1">
+                    Create the Customer here
+                </span>
+            </div>
+            <div>
+                <form id = "createForm" asp-action="createCustomer" class="create-form">
+
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <input hidden asp-for="customerId" />
+
+                    <div class="form-group">
+                        <label asp-for="customerName" class="control-label">Name</label>
+                        <input asp-for="customerName" class="form-control" placeholder="Enter Customer Name" />
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="customerName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="customerDOB" class="control-label">Date of Birth</label>
+                        <input asp-for="customerDOB" class="form-control" type="date" placeholder="Enter Date of Birth" />
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="customerDOB" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="customerAddress" class="control-label">Address</label>
+                        <textarea asp-for="customerAddress" class="form-control" placeholder="Enter Customer Address"></textarea>
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="customerAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="customerAdhaarnumber" class="control-label">Aadhar</label>
+                        <input asp-for="customerAdhaarnumber" class="form-control" placeholder="Enter Customer Aadhar" />
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="customerAdhaarnumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="customerPannumber" class="control-label">PAN </label>
+                        <input asp-for="customerPannumber" class="form-control" placeholder="Enter Customer PAN number" />
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="customerPannumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="customerAccountType" class="control-label">Account Type</label>
+                        <select asp-for="customerAccountType" class="form-select" aria-label="Default select example">
+                            <option value="Savings">
+                                Savings
+                            </option>
+                            <option value="Current">
+                                Current
+                            </option>
+                        </select>
+                        <span asp-validation-for="customerAccountType" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit">
+                        Create Customer
+                    </button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
